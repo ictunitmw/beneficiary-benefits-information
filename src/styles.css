@@ -1,0 +1,1528 @@
+/* =========================================================
+   GLOBAL STYLES — DEEP VIOLET & GOLD THEME
+========================================================= */
+
+:root {
+  font-family: "Noto Sans Tamil", "Latha", "Arial", sans-serif;
+  color: #292333;
+  background: #F8F6FB;
+  font-synthesis: none;
+
+  /* Main theme colours */
+  --primary: #5B2C83;
+  --primary-dark: #32104A;
+  --primary-hover: #70409A;
+  --primary-light: #F0EAF6;
+
+  --gold: #D4AF37;
+  --gold-soft: #E6C56A;
+  --gold-light: #F5F0E1;
+
+  --page-bg: #F8F6FB;
+  --card-bg: #FFFFFF;
+  --text-primary: #292333;
+  --text-secondary: #655E6D;
+  --border-color: #D9CDE5;
+
+  --success: #2E7D32;
+  --danger: #B42318;
+
+  /* Section background tints */
+  --section-a-bg: #F5F0FB;
+  --section-b-bg: #FBF7EC;
+  --section-c-bg: #F0F7F3;
+  --fieldset-bg: #FCFAFE;
+  --family-table-bg: #FAF7FD;
+  --family-table-alt: #F3EDF9;
+
+  /* Section accent borders */
+  --section-a-accent: #5B2C83;
+  --section-b-accent: #D4AF37;
+  --section-c-accent: #2E7D32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page-bg);
+  color: var(--text-primary);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  background: var(--primary);
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: #FFFFFF;
+  color: var(--text-primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  accent-color: var(--primary);
+}
+
+input[type="radio"] {
+  width: auto;
+  accent-color: var(--primary);
+}
+
+
+/* =========================================================
+   HEADER — DEEP VIOLET & GOLD
+========================================================= */
+
+.site-header {
+  width: 100%;
+  min-height: 184px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    110deg,
+    #32104A 0%,
+    #452078 55%,
+    #5B2C83 100%
+  );
+
+  color: #FFFFFF;
+  border-bottom: 4px solid var(--gold);
+  text-align: left;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 26px;
+}
+
+.header-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.government-logo {
+  display: block;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: center;
+  background: #FFFFFF;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.office-logo {
+  display: block;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  background: #FFFFFF;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 2px;
+  margin: 0;
+}
+
+.heading {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding: 0;
+}
+
+.heading .header-office-name {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.heading .tamil-title {
+  color: #FFFFFF;
+  font-size: 21px;
+  margin-bottom: 0;
+}
+
+.heading .sinhala-title {
+  color: var(--gold-soft);
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.heading .english-title {
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.heading .header-subtitle {
+  margin: 5px 0 0;
+  color: var(--gold-soft);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--primary-dark);
+}
+
+.main-nav button {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.main-nav button:hover {
+  background: var(--primary);
+  border-color: var(--gold);
+  color: #FFFFFF;
+}
+
+.nav-user {
+  color: #FFFFFF;
+  margin-left: auto;
+  overflow-wrap: anywhere;
+}
+
+.logout-button {
+  background: #8B2525;
+  color: #FFFFFF;
+}
+
+.logout-button:hover {
+  background: #A83232;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.page {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 20px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.page h2 {
+  color: var(--primary);
+}
+
+.page h3 {
+  color: var(--primary);
+}
+
+.page-actions,
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.secondary {
+  background: rgb(10, 179, 61);
+  color: white;
+}
+
+.secondary:hover {
+  background: #514858;
+}
+
+
+/* =========================================================
+   A4 FORM — NEAT A4 LAYOUT
+========================================================= */
+
+.a4-form {
+  width: 210mm;
+  max-width: 100%;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 12mm 14mm;
+  background: #FFFFFF;
+  border: 1px solid #E5DDEC;
+  box-shadow: 0 4px 12px rgba(50, 16, 74, 0.08);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+.form-title {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary-dark);
+}
+
+.section-heading {
+  margin: 22px 0 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  background: var(--gold-light);
+  border-left: 4px solid var(--gold);
+  border-radius: 3px;
+}
+
+.family-table-title {
+  margin: 12px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-field {
+  margin-bottom: 12px;
+}
+
+.form-field > label,
+.login-card > label,
+.filters label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  margin-top: 3px;
+  padding: 7px 9px;
+  font-size: 13px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 48px;
+}
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.radio-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FORM SECTIONS — SUBTLE BACKGROUND TINTS
+========================================================= */
+
+.form-section {
+  position: relative;
+  margin: 0 0 18px;
+  padding: 14px 16px 16px;
+  border-radius: 6px;
+  border-left: 5px solid var(--border-color);
+  background: transparent;
+  break-inside: avoid;
+}
+
+.form-section.section-a {
+  background: var(--section-a-bg);
+  border-left-color: var(--section-a-accent);
+}
+
+.form-section.section-b {
+  background: var(--section-b-bg);
+  border-left-color: var(--section-b-accent);
+}
+
+.form-section.section-c {
+  background: var(--section-c-bg);
+  border-left-color: var(--section-c-accent);
+}
+
+.form-section .section-heading {
+  margin-top: 0;
+  background: transparent;
+  border-left: 0;
+  padding: 0 0 8px;
+  border-bottom: 1px solid rgba(50, 16, 74, 0.12);
+  border-radius: 0;
+}
+
+.form-section .benefit-fieldset {
+  background: #FFFFFF;
+  border-color: rgba(50, 16, 74, 0.15);
+}
+
+.form-section.section-a .family-table-wrapper {
+  background: #FFFFFF;
+}
+
+.form-section.section-a .family-table th {
+  background: var(--primary-dark);
+}
+
+.form-section.section-a .family-table tbody tr:nth-child(even) {
+  background: var(--family-table-alt);
+}
+
+.form-section.section-a .family-table tbody tr:hover {
+  background: var(--primary-light);
+}
+
+
+/* =========================================================
+   FAMILY TABLE — COMPACT & A4-FRIENDLY
+========================================================= */
+
+.family-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 8px 0 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.family-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  table-layout: fixed;
+  min-width: 660px;
+}
+
+.family-table th,
+.family-table td {
+  border: 1px solid var(--border-color);
+  padding: 4px 5px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.family-table th {
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 10.5px;
+  line-height: 1.35;
+  text-align: center;
+  padding: 6px 4px;
+}
+
+.family-table td.member-number {
+  text-align: center;
+  font-weight: 600;
+  vertical-align: middle;
+  color: var(--primary);
+}
+
+.family-table td input,
+.family-table td select {
+  width: 100%;
+  padding: 4px 5px;
+  font-size: 11px;
+  border: 1px solid #E3DAEE;
+  border-radius: 3px;
+  margin: 0;
+  background: #FFFFFF;
+}
+
+.family-table td select {
+  padding-right: 2px;
+}
+
+.family-table td input[type="date"] {
+  font-size: 10.5px;
+  padding: 3px 4px;
+}
+
+.age-display {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.other-relationship {
+  margin-top: 4px;
+}
+
+.remove-member-button {
+  padding: 4px 8px;
+  font-size: 10.5px;
+  background: #8B2525;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.remove-member-button:hover {
+  background: #A83232;
+}
+
+.remove-member-button:disabled {
+  background: #BBA8C9;
+  cursor: not-allowed;
+}
+
+.family-table-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 6px 0 14px;
+}
+
+.family-table-actions button {
+  padding: 6px 14px;
+  font-size: 12.5px;
+}
+
+
+/* =========================================================
+   BENEFITS FIELDSET
+========================================================= */
+
+.benefit-fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 10px 12px 12px;
+  margin: 14px 0;
+  background: #FDFBFE;
+}
+
+.benefit-fieldset legend {
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0 6px;
+  color: var(--primary);
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+  margin-top: 6px;
+}
+
+.check-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.45;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.check-option input[type="checkbox"] {
+  margin: 3px 0 0 0;
+  flex-shrink: 0;
+}
+
+.sub-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  padding: 10px 0 4px;
+  margin-top: 10px;
+  border-top: 1px dashed var(--border-color);
+  font-size: 12.5px;
+}
+
+.sub-options strong {
+  width: 100%;
+  color: var(--primary);
+  font-size: 12.5px;
+  margin-bottom: 2px;
+}
+
+.error-message {
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 12px;
+  background: #FDECEA;
+  border-left: 4px solid var(--danger);
+  border-radius: 3px;
+  margin: 12px 0;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.filters label {
+  color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.summary-card {
+  padding: 18px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--gold);
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+  box-shadow: 0 2px 8px rgba(50, 16, 74, 0.04);
+}
+
+.summary-card span,
+.summary-card strong {
+  display: block;
+}
+
+.summary-card span {
+  color: var(--text-secondary);
+}
+
+.summary-card strong {
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   TABLES (general)
+========================================================= */
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+td {
+  color: var(--text-primary);
+}
+
+tbody tr:nth-child(even) {
+  background: #F8F5FB;
+}
+
+tbody tr:hover {
+  background: var(--primary-light);
+}
+
+.small-note {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   FOOTER — DEEP VIOLET & GOLD
+========================================================= */
+
+.site-footer {
+  width: 100%;
+  margin-top: 30px;
+  padding: 22px 32px;
+  background: linear-gradient(
+    110deg,
+    #32104A 0%,
+    #452078 55%,
+    #5B2C83 100%
+  );
+  color: #FFFFFF;
+  border-top: 4px solid var(--gold);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.footer-government-logo {
+  display: block;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: center;
+  background: #FFFFFF;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.footer-office-logo {
+  display: block;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  background: #FFFFFF;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.footer-content {
+  width: 100%;
+  min-width: 0;
+  flex: none;
+  text-align: center;
+}
+
+.footer-office-name {
+  margin: 0 0 6px;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.footer-unit {
+  margin: 4px 0;
+  color: var(--gold-soft);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.footer-copyright {
+  margin: 4px 0 0;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER — RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 20px 18px;
+  }
+
+  .footer-inner {
+    gap: 18px;
+  }
+
+  .footer-logos {
+    gap: 10px;
+  }
+
+  .footer-government-logo,
+  .footer-office-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .footer-office-name {
+    font-size: 15px;
+  }
+
+  .footer-unit {
+    font-size: 12px;
+  }
+
+  .footer-copyright {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-footer {
+    padding: 18px 12px;
+  }
+
+  .footer-inner {
+    gap: 12px;
+  }
+
+  .footer-logos {
+    gap: 7px;
+  }
+
+  .footer-government-logo,
+  .footer-office-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-office-name {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-unit {
+    font-size: 10px;
+  }
+
+  .footer-copyright {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-footer {
+    padding: 14px 8px;
+  }
+
+  .footer-inner {
+    gap: 8px;
+  }
+
+  .footer-logos {
+    gap: 5px;
+  }
+
+  .footer-government-logo,
+  .footer-office-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer-office-name {
+    font-size: 10px;
+  }
+
+  .footer-unit,
+  .footer-copyright {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   LOGIN PAGE — DEEP VIOLET & GOLD
+========================================================= */
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #F8F6FB 0%,
+    #F0EAF6 100%
+  );
+}
+
+.login-card {
+  width: min(100%, 420px);
+  padding: 28px;
+  background: #FFFFFF;
+  border: 1px solid #D9CDE5;
+  border-top: 5px solid #D4AF37;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(50, 16, 74, 0.14);
+}
+
+.login-card h2 {
+  color: #5B2C83;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.login-card label {
+  display: block;
+  color: #32104A;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.login-card input {
+  width: 100%;
+  margin: 7px 0 18px;
+  padding: 12px;
+  background: #FFFFFF;
+  color: #292333;
+  border: 1px solid #D9CDE5;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.login-card input:focus {
+  border-color: #5B2C83;
+  box-shadow: 0 0 0 3px rgba(91, 44, 131, 0.12);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    #32104A 0%,
+    #5B2C83 100%
+  );
+  color: #FFFFFF;
+  border: 1px solid #D4AF37;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.login-card button:hover {
+  background: #70409A;
+  box-shadow: 0 4px 12px rgba(50, 16, 74, 0.2);
+}
+
+.login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   HEADER — RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .site-header {
+    min-height: 160px;
+    padding: 20px 18px;
+  }
+
+  .header-inner {
+    gap: 18px;
+  }
+
+  .header-logos {
+    gap: 12px;
+  }
+
+  .government-logo,
+  .office-logo {
+    width: 62px;
+    height: 62px;
+  }
+
+  .heading .tamil-title {
+    font-size: 18px;
+  }
+
+  .heading .sinhala-title {
+    font-size: 14px;
+  }
+
+  .heading .english-title {
+    font-size: 15px;
+  }
+
+  .heading .header-subtitle {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    min-height: auto;
+    padding: 18px 12px;
+  }
+
+  .header-inner {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header-logos {
+    gap: 7px;
+  }
+
+  .government-logo,
+  .office-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .heading .tamil-title {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .heading .sinhala-title {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .heading .english-title {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .heading .header-subtitle {
+    font-size: 8px;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .benefit-grid,
+  .filters,
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mobile form adjustments */
+
+  .a4-form {
+    width: 100%;
+    padding: 12px;
+    min-height: auto;
+    font-size: 12.5px;
+  }
+
+  .form-title {
+    font-size: 14px;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+
+  .section-heading {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .form-section {
+    padding: 10px 10px 12px;
+    border-left-width: 4px;
+  }
+
+  .family-table {
+    font-size: 10.5px;
+  }
+
+  .family-table th {
+    font-size: 10px;
+  }
+
+  .family-table td input,
+  .family-table td select {
+    font-size: 10.5px;
+    padding: 3px 4px;
+  }
+
+  .page {
+    margin: 10px;
+    padding: 12px;
+  }
+
+  .main-nav {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header {
+    padding: 14px 8px;
+  }
+
+  .header-inner {
+    gap: 8px;
+  }
+
+  .header-logos {
+    gap: 5px;
+  }
+
+  .government-logo,
+  .office-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .heading .tamil-title {
+    font-size: 13px;
+  }
+
+  .heading .sinhala-title,
+  .heading .english-title {
+    font-size: 10px;
+  }
+
+  .heading .header-subtitle {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   A4 PRINT SETTINGS
+========================================================= */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 10pt;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .no-print,
+  .main-nav,
+  .site-footer {
+    display: none !important;
+  }
+
+  /* Print header */
+
+  .site-header {
+    width: 100%;
+    min-height: 0;
+    padding: 0 0 8px;
+    background: #FFFFFF;
+    color: #000000;
+    border-bottom: 2px solid #777777;
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: none;
+    gap: 8px;
+  }
+
+  .header-logos {
+    gap: 8px;
+  }
+
+  .government-logo,
+  .office-logo {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    flex-shrink: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .government-logo {
+    object-fit: contain;
+    background: #FFFFFF;
+    border: 2px solid #777777;
+  }
+
+  .office-logo {
+    object-fit: cover;
+    border: 2px solid #777777;
+  }
+
+  .heading {
+    text-align: left;
+  }
+
+  .heading .tamil-title {
+    color: #000000;
+    font-size: 15pt;
+  }
+
+  .heading .sinhala-title {
+    color: #000000;
+    font-size: 11pt;
+  }
+
+  .heading .english-title {
+    color: #000000;
+    font-size: 11pt;
+  }
+
+  .heading .header-subtitle {
+    color: #000000;
+    font-size: 8pt;
+  }
+
+  /* Print page */
+
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #FFFFFF;
+  }
+
+  .page h2,
+  .page h3 {
+    color: #000000;
+  }
+
+  .a4-form {
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: #FFFFFF;
+    font-size: 9.5pt;
+  }
+
+  .form-title {
+    color: #000000;
+    border-bottom: 1px solid #777777;
+    font-size: 12pt;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+
+  .section-heading {
+    color: #000000;
+    background: #EEEEEE;
+    border-left: 3px solid #777777;
+    font-size: 11pt;
+    margin: 14px 0 8px;
+    padding: 5px 8px;
+  }
+
+  .family-table-title {
+    color: #000000;
+    font-size: 10.5pt;
+  }
+
+  /* Print sections — lighter tints, no shadows */
+
+  .form-section {
+    padding: 8px 10px 10px;
+    margin: 0 0 10px;
+    border-left-width: 3px;
+    border-radius: 0;
+  }
+
+  .form-section.section-a {
+    background: #F8F5FB;
+    border-left-color: #5B2C83;
+  }
+
+  .form-section.section-b {
+    background: #FCFAF2;
+    border-left-color: #B8962E;
+  }
+
+  .form-section.section-c {
+    background: #F4F9F5;
+    border-left-color: #2E7D32;
+  }
+
+  .form-section .section-heading {
+    background: transparent;
+    border-left: 0;
+    border-bottom: 1px solid #AAAAAA;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .form-section .benefit-fieldset {
+    background: #FFFFFF;
+  }
+
+  .form-field,
+  .benefit-fieldset,
+  tr {
+    break-inside: avoid;
+  }
+
+  .family-table-wrapper,
+  .table-wrap {
+    overflow: visible;
+    border: 1px solid #AAAAAA;
+  }
+
+  table {
+    font-size: 8.5pt;
+    background: #FFFFFF;
+  }
+
+  th,
+  td {
+    padding: 4px 5px;
+    color: #000000;
+    border: 1px solid #777777;
+  }
+
+  th {
+    background: #EEEEEE;
+    color: #000000;
+  }
+
+  tbody tr:nth-child(even),
+  tbody tr:hover {
+    background: #FFFFFF;
+  }
+
+  input,
+  select,
+  textarea {
+    border: 0;
+    border-bottom: 1px solid #777777;
+    border-radius: 0;
+    padding: 3px 2px;
+    background: transparent;
+    color: #000000;
+    font-size: 9pt;
+  }
+
+  input[type="checkbox"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+  }
+
+  input[type="radio"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+  }
+
+  .benefit-fieldset {
+    border: 1px solid #AAAAAA;
+    background: #FFFFFF;
+    padding: 8px 10px;
+    margin: 10px 0;
+  }
+
+  .benefit-fieldset legend,
+  .sub-options strong {
+    color: #000000;
+  }
+
+  .check-option,
+  .sub-options {
+    font-size: 9pt;
+  }
+
+  .remove-member-button,
+  .family-table-actions {
+    display: none !important;
+  }
+
+  .summary-card {
+    background: #FFFFFF;
+    color: #000000;
+    border: 1px solid #AAAAAA;
+    box-shadow: none;
+  }
+
+  .summary-card span,
+  .summary-card strong {
+    color: #000000;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+}
+
+
+/* =========================================================
+   REGISTRATION TABS — VIOLET & GOLD
+========================================================= */
+
+.registration-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 8px;
+  background-color: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.registration-tabs button {
+  flex: 1;
+  min-height: 48px;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 2px solid transparent;
+  border-radius: 7px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.registration-tabs button:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--border-color);
+}
+
+.registration-tabs button.active {
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 100%
+  );
+  color: #FFFFFF;
+  border: 2px solid var(--gold);
+  box-shadow: 0 2px 6px rgba(50, 16, 74, 0.15);
+}
+
+.registration-tabs button.active:hover {
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
