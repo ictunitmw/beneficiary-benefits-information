@@ -323,7 +323,6 @@ export default function BeneficiaryRecords({
                 <th>தொலைபேசி</th>
                 <th>கிராமசேவகர் பிரிவு</th>
                 <th>பெற்ற நன்மைகள்</th>
-                <th>குடும்ப உறுப்பினர்கள்</th>
                 <th>பெற்ற திகதி</th>
                 <th>வழங்கிய நிறுவனம்</th>
               </tr>
@@ -348,7 +347,7 @@ export default function BeneficiaryRecords({
                       ` — ${record.other_benefits}`}
                   </td>
 
-                  <td>{record.family_members}</td>
+                  
                   <td>{formatDate(record.received_date)}</td>
                   <td>{record.providing_organization || "-"}</td>
                 </tr>

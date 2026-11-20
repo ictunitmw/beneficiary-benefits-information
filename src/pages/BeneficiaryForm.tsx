@@ -75,7 +75,7 @@ export default function BeneficiaryForm({ onSaved }: Props) {
 
   const [gnDivision, setGnDivision] = useState("");
   const [homeAddress, setHomeAddress] = useState("");
-  const [familyMemberCount, setFamilyMemberCount] = useState("");
+  //const [familyMemberCount, setFamilyMemberCount] = useState("");
 
   const [benefits, setBenefits] = useState<string[]>([]);
   const [livestock, setLivestock] = useState<string[]>([]);
@@ -478,7 +478,7 @@ export default function BeneficiaryForm({ onSaved }: Props) {
           phone,
           gn_division: gnDivision,
           home_address: homeAddress.trim(),
-          family_members: Number(familyMemberCount),
+          //family_members: Number(familyMemberCount),
           family_details: savedFamilyMembers,
           welfare_receiving: welfareReceiving === "ஆம்",
           welfare_schemes:
@@ -517,9 +517,21 @@ export default function BeneficiaryForm({ onSaved }: Props) {
         });
 
       if (saveError) {
-        console.error("Supabase insert error:", saveError);
-        throw saveError;
-      }
+  console.error("Supabase insert error:", {
+    message: saveError.message,
+    details: saveError.details,
+    hint: saveError.hint,
+    code: saveError.code,
+  });
+
+  alert(
+    `Database Error: ${saveError.message}\n` +
+    `Details: ${saveError.details || "No details"}\n` +
+    `Code: ${saveError.code || "No code"}`
+  );
+
+  throw saveError;
+}
 
       alert("பயனாளியின் விபரங்கள் வெற்றிகரமாக சேமிக்கப்பட்டன.");
 
@@ -530,7 +542,7 @@ export default function BeneficiaryForm({ onSaved }: Props) {
       setOtherWelfareScheme("");
       setGnDivision("");
       setHomeAddress("");
-      setFamilyMemberCount("");
+      //setFamilyMemberCount("");
       setBenefits([]);
       setLivestock([]);
       setAgricultureDetails("");
